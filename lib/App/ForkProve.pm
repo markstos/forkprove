@@ -75,8 +75,9 @@ App::ForkProve - forking prove
 
 =head1 SYNOPSIS
 
-  use App::ForkProve;
-  App::ForkProve->run(@ARGV);
+   use App::ForkProve;
+   BEGIN { App::ForkProve->process_preloads(@ARGV) };
+   App::ForkProve->run();
 
 =head1 DESCRIPTION
 
